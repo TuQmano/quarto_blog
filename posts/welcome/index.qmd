@@ -1,0 +1,10 @@
+---
+title: "Se va la segunda..."
+author: "Juan Pablo Ruiz Nicolini"
+date: "2023-08-31"
+categories: [news]
+---
+
+Con éste, el primer posteo en `Quarto`, este TuQmano arranca su enésima época blogueando. El momento no es casual... hoy es formalmente mi último día como Director Nacional de Mercados y Estadísitca del Ministerio de Turismo y Deportes de Argentina (o como me gusta más referenciar, el responsable del *Sistema de Información Turística de la Argentina* `#SINTA`) ![](https://tableros.yvera.tur.ar/dnmye/manual/imagenes/roceta.png)
+
+Prometí hace unos días que iba a contar *en extenso* sobre estos casi tres años desarrollando el `#SINTA` , motivo principal del por qué no estuve *blogueando* mucho en [.tuqmano.com](www.tuqmano.com). Cuando se trataba de estar generando contenido, en diversos soportes, lo estuvimos haciendo concentrando los esfuerzos en [yverta.tur.ar/sinta](www.yverta.tur.ar/sinta).

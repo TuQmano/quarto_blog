@@ -1,0 +1,21 @@
+---
+title: "El TuQmano"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: TuQamno
+      href: https://twitter.com/TuQmano
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/juanpabloruiznicolini
+    - icon: github
+      text: Github
+      href: https://github.com/TuQmano
+
+---
+
+Sobre el TuQmano
+
+
