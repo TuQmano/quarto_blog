@@ -13,7 +13,7 @@ Prometí hace unos días que iba a contar *en extenso* sobre estos casi tres añ
 
 Una decisión temprana que tomamos cunado empezamos a trabajar con el equipo, que visto hoy celebro y creo fundamental, fue la de tomarnos tiempo para documentar los procesos. El contenedor final de ello es el documento que acá comparto, que fue pensado como una herramienta viva, actualizable, que sirva como hoja de ruta para el equipo; y también como una referencia hacia afuera de cómo trabajamos.
 
-Dice el `Manual de Procedimientos` :
+Dice el [`Manual de Procedimientos`](https://tableros.yvera.tur.ar/dnmye/manual/) :
 
 > La DNMyE se caracteriza por **(i)** ser una organización productora de una gran cantidad de datos; **(ii)** con un equipo altamente calificado técnicamente (en campos de la estadística, desde ya, y también con amplio conocimiento de dominio turístico). Esto sucedía al mismo tiempo que otras características que disminuían el impacto potencial de esos recursos valiosos. A saber: **(iii)** una baja explotación y exposición del gran conjunto de datos, estadísticas e investigaciones desarrolladas; **(iv)** una gran especialización temática y de responsabilidades de analistas - con documentación pública y publicada limitada - generando una alta dependencia de personas individuales.
 >
@@ -42,9 +42,9 @@ Dice el `Manual de Procedimientos` :
 >
 > 2.  **COMUNICACIÓN** - aglutina flujos de trabajo y procesos detrás del [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/), la plataforma que desarrollamos y mantenemos para atacar el déficit de comunicación y democratizar el acceso a la producción de la DNMyE (ver Capítulo [4](https://tableros.yvera.tur.ar/dnmye/manual/comunicacion-sinta.html#comunicacion-sinta)).
 >
-> > *(Una versión de este desarrollo se presentó como ponencia en la conferencia internacional csv,conf,v7 que tuvo lugar en la Ciudad de Buenos Aires los días 19 y 20 de abril de 2023)*^[1](https://tableros.yvera.tur.ar/dnmye/manual/#fn1)^
+> > *(Una versión de este desarrollo se presentó como ponencia en la conferencia internacional csv,conf,v7 que tuvo lugar en la Ciudad de Buenos Aires los días 19 y 20 de abril de 2023)* ^[1](https://tableros.yvera.tur.ar/dnmye/manual/#fn1)^
 
-Entonces, dejo acá este documento vivo, que resume en buena medida buena parte de lo que trabajamos estos casi tres años con el maravilloso equipo que me toco en suerte conducir, y con el cual contamos con el apoyo y acompañamiento de todo el equipo de gestión que armó Matías Lammens al frente del MINTURDEP. En su nombre, muchas gracias a todoxs, de quienes aprendí mucho y me llevo el mejor de los recuerdos.
+Entonces, dejo acá este [documento vivo](https://tableros.yvera.tur.ar/dnmye/manual/), que resume en buena medida buena parte de lo que trabajamos estos casi tres años con el maravilloso equipo que me toco en suerte conducir, y con el cual contamos con el apoyo y acompañamiento de todo el equipo de gestión que armó Matías Lammens al frente del MINTURDEP. En su nombre, muchas gracias a todoxs, de quienes aprendí mucho y me llevo el mejor de los recuerdos.
 
 Fue un gran placer. Y, para mí, un gran orgullo el trabajo realizado. \
 \
