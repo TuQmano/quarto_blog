@@ -5,6 +5,47 @@ date: "2023-08-31"
 categories: [news]
 ---
 
-Con éste, el primer posteo en `Quarto`, este TuQmano arranca su enésima época blogueando. El momento no es casual... hoy es formalmente mi último día como Director Nacional de Mercados y Estadísitca del Ministerio de Turismo y Deportes de Argentina (o como me gusta más referenciar, el responsable del *Sistema de Información Turística de la Argentina* `#SINTA`) ![](https://tableros.yvera.tur.ar/dnmye/manual/imagenes/roceta.png)
+Con éste, el primer posteo en `Quarto`, este TuQmano arranca su enésima época blogueando. El momento no es casual... hoy es formalmente mi último día como Director Nacional de Mercados y Estadísitca del Ministerio de Turismo y Deportes de Argentina (o como me gusta más referenciar, el responsable del *Sistema de Información Turística de la Argentina* `#SINTA`)
 
-Prometí hace unos días que iba a contar *en extenso* sobre estos casi tres años desarrollando el `#SINTA` , motivo principal del por qué no estuve *blogueando* mucho en [.tuqmano.com](www.tuqmano.com). Cuando se trataba de estar generando contenido, en diversos soportes, lo estuvimos haciendo concentrando los esfuerzos en [yverta.tur.ar/sinta](www.yverta.tur.ar/sinta).
+Prometí hace unos días que iba a contar *en extenso* sobre estos casi tres años desarrollando el `#SINTA` , motivo principal del por qué no estuve *blogueando* mucho en [tuQmanoR](https://tuqmanor.netlify.app/). Cuando se trataba de estar generando contenido, en diversos soportes, lo estuvimos haciendo concentrando los esfuerzos en [yverta.tur.ar/sinta](https://www.yvera.tur.ar/sinta/).
+
+### Manual de Procedimientos DNMyE
+
+Una decisión temprana que tomamos cunado empezamos a trabajar con el equipo, que visto hoy celebro y creo fundamental, fue la de tomarnos tiempo para documentar los procesos. El contenedor final de ello es el documento que acá comparto, que fue pensado como una herramienta viva, actualizable, que sirva como hoja de ruta para el equipo; y también como una referencia hacia afuera de cómo trabajamos.
+
+Dice el `Manual de Procedimientos` :
+
+> La DNMyE se caracteriza por **(i)** ser una organización productora de una gran cantidad de datos; **(ii)** con un equipo altamente calificado técnicamente (en campos de la estadística, desde ya, y también con amplio conocimiento de dominio turístico). Esto sucedía al mismo tiempo que otras características que disminuían el impacto potencial de esos recursos valiosos. A saber: **(iii)** una baja explotación y exposición del gran conjunto de datos, estadísticas e investigaciones desarrolladas; **(iv)** una gran especialización temática y de responsabilidades de analistas - con documentación pública y publicada limitada - generando una alta dependencia de personas individuales.
+>
+> De manera simplificada y a modo de ilustración, podemos pensar en un esquema como el siguiente, con procesos aislados, individuales y más bien cerrados:
+>
+> ![](https://tableros.yvera.tur.ar/dnmye/manual/imagenes/datos_cerrados.png){width="450"}
+>
+> De un tiempo a esta parte, el flujo de trabajo de la DNMyE se ha ido transformando con la idea de generar procesos más abiertos, colaborativos y reproducibles. El diagrama que sigue intenta ilustrar esta transformación. Los flujos son ahora más interdependientes, se desarrollaron infraestructuras para el almacenamiento y procesamiento de datos y nuevas plataformas para la comunicación de la información, entre otras.
+
+![](https://tableros.yvera.tur.ar/dnmye/manual/imagenes/datos_abiertos.png){width="450"}
+
+> Internamente, la DNMyE se organiza a partir de 3 grandes equipos o áreas que, aunque en los hechos no sean compartimentos estancos y el diseño se propone transversal, pueden ser definidas por su misión primaria:
+>
+> -   **ECONOMÍA**: realizar seguimiento de indicadores de actividad del sector en particular y la economía en general; generar reportes de evaluación de políticas y proyecciones. Ejemplo de estos procesos se encuentran en el Capítulo [3](https://tableros.yvera.tur.ar/dnmye/manual/economia-del-turismo.html#economia-del-turismo);
+>
+> -   **ESTADÍSTICA**: hacer seguimiento y coordinación de los operativos estadísticos (ETI, EOH, EVyTH), la producción de la Cuenta Satélite de Turismo de Argentina (CST-A) y del trabajo con equipos de datos o estadísticas de turismo en las jurisdicciones (provincias y municipios), tal como se detalla en el Capítulo [1](https://tableros.yvera.tur.ar/dnmye/manual/operativos-estadisticos.html#operativos-estadisticos);
+>
+> -   **DATOS**: proponer flujos de trabajo reproducibles y sistematizados; generación de software, tableros y reportes; desarrollo de nuevas fuentes de datos.
+
+![](https://tableros.yvera.tur.ar/dnmye/manual/imagenes/roceta.png){width="2000"}
+
+
+> El diagrama anterior resume en buena medida estas mesas de trabajo de la DNMyE y agrega dos *espacios* más, vinculados en buena medida con el trabajo del equipo de **DATOS**:
+>
+> 1.  **ARMONIZACIÓN** - organiza el trabajo federal que se hace con provincias y municipios y llevando adelante el desarrollo del [**Sistema Federal de Gestión de Datos Turísticos de la Argentina - `<data>TUR`**](https://datatur.yvera.tur.ar/);
+>
+> 2.  **COMUNICACIÓN** - aglutina flujos de trabajo y procesos detrás del [**Sistema de Información Turística de la Argentina (SINTA)**](https://www.yvera.tur.ar/sinta/), la plataforma que desarrollamos y mantenemos para atacar el déficit de comunicación y democratizar el acceso a la producción de la DNMyE (ver Capítulo [4](https://tableros.yvera.tur.ar/dnmye/manual/comunicacion-sinta.html#comunicacion-sinta)).
+>
+> > *(Una versión de este desarrollo se presentó como ponencia en la conferencia internacional csv,conf,v7 que tuvo lugar en la Ciudad de Buenos Aires los días 19 y 20 de abril de 2023)*^[1](https://tableros.yvera.tur.ar/dnmye/manual/#fn1)^
+
+Entonces, dejo acá este documento vivo, que resume en buena medida buena parte de lo que trabajamos estos casi tres años con el maravilloso equipo que me toco en suerte conducir, y con el cual contamos con el apoyo y acompañamiento de todo el equipo de gestión que armó Matías Lammens al frente del MINTURDEP. En su nombre, muchas gracias a todoxs, de quienes aprendí mucho y me llevo el mejor de los recuerdos.
+
+Fue un gran placer. Y, para mí, un gran orgullo el trabajo realizado. \
+\
+Seguimos!
