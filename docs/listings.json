@@ -2,7 +2,19 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/welcome/index.html"
+      "/posts/welcome/index.html",
+      "/posts/2020-12-30-un-2020-con-mucho-amor.html",
+      "/posts/2020-10-10-latinr-in-quarantine.html",
+      "/posts/2020-05-22-empaquetar.html",
+      "/posts/2020-03-29-datos-y-covid19.html",
+      "/posts/2020-03-15-dibujar-legislaturas.html",
+      "/posts/2020-03-11-los-discursos-de-les-presidentes.html",
+      "/posts/2020-03-12-congreso-2-0-politicos-argentinos-en-twitter.html",
+      "/posts/2019-09-30-latinr2019-ha-muerto-que-viva-latinr2020.html",
+      "/posts/2019-09-08-latinr-2019.html",
+      "/posts/2019-04-18-diagramas.html",
+      "/posts/Geofacetear.html",
+      "/posts/Bienvenidos_a_TuQmanoR.html"
     ]
   }
 ]

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Juan Pablo Ruiz Nicolini">
-<meta name="dcterms.date" content="2023-08-31">
+<meta name="dcterms.date" content="2020-03-29">
 
-<title>DiaRio de un TuQmano - Se va la segunda…</title>
+<title>DiaRio de un TuQmano - Datos y Covid19</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,8 +61,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -72,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">DiaRio de un TuQmano</span>
     </a>
   </div>
@@ -83,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">El TuQmano</span></a>
   </li>  
   <li class="nav-item compact">
@@ -107,9 +109,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Se va la segunda…</h1>
+      <h1 class="title">Datos y Covid19</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
+                <div class="quarto-category">Data</div>
               </div>
                   </div>
   </div>
@@ -127,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 31, 2023</p>
+        <p class="date">March 29, 2020</p>
       </div>
     </div>
     
@@ -145,45 +147,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Con éste, el primer posteo en <code>Quarto</code>, este TuQmano arranca su enésima época blogueando. El momento no es casual… hoy es formalmente mi último día como Director Nacional de Mercados y Estadísitca del Ministerio de Turismo y Deportes de Argentina (o como me gusta más referenciar, el responsable del <em>Sistema de Información Turística de la Argentina</em> <code>#SINTA</code>)</p>
-<p>Prometí hace unos días que iba a contar <em>en extenso</em> sobre estos casi tres años desarrollando el <code>#SINTA</code> , motivo principal del por qué no estuve <em>blogueando</em> mucho en <a href="https://tuqmanor.netlify.app/">tuQmanoR</a>. Cuando se trataba de estar generando contenido, en diversos soportes, lo estuvimos haciendo concentrando los esfuerzos en <a href="https://www.yvera.tur.ar/sinta/">yverta.tur.ar/sinta</a>.</p>
-<section id="manual-de-procedimientos-dnmye" class="level3">
-<h3 class="anchored" data-anchor-id="manual-de-procedimientos-dnmye">Manual de Procedimientos DNMyE</h3>
-<p>Una decisión temprana que tomamos cunado empezamos a trabajar con el equipo, que visto hoy celebro y creo fundamental, fue la de tomarnos tiempo para documentar los procesos. El contenedor final de ello es el documento que acá comparto, que fue pensado como una herramienta viva, actualizable, que sirva como hoja de ruta para el equipo; y también como una referencia hacia afuera de cómo trabajamos.</p>
-<p>Dice el <a href="https://tableros.yvera.tur.ar/dnmye/manual/"><code>Manual de Procedimientos</code></a> :</p>
-<blockquote class="blockquote">
-<p>La DNMyE se caracteriza por <strong>(i)</strong> ser una organización productora de una gran cantidad de datos; <strong>(ii)</strong> con un equipo altamente calificado técnicamente (en campos de la estadística, desde ya, y también con amplio conocimiento de dominio turístico). Esto sucedía al mismo tiempo que otras características que disminuían el impacto potencial de esos recursos valiosos. A saber: <strong>(iii)</strong> una baja explotación y exposición del gran conjunto de datos, estadísticas e investigaciones desarrolladas; <strong>(iv)</strong> una gran especialización temática y de responsabilidades de analistas - con documentación pública y publicada limitada - generando una alta dependencia de personas individuales.</p>
-<p>De manera simplificada y a modo de ilustración, podemos pensar en un esquema como el siguiente, con procesos aislados, individuales y más bien cerrados:</p>
-<p><img src="https://tableros.yvera.tur.ar/dnmye/manual/imagenes/datos_cerrados.png" class="img-fluid" width="450"></p>
-<p>De un tiempo a esta parte, el flujo de trabajo de la DNMyE se ha ido transformando con la idea de generar procesos más abiertos, colaborativos y reproducibles. El diagrama que sigue intenta ilustrar esta transformación. Los flujos son ahora más interdependientes, se desarrollaron infraestructuras para el almacenamiento y procesamiento de datos y nuevas plataformas para la comunicación de la información, entre otras.</p>
-</blockquote>
-<p><img src="https://tableros.yvera.tur.ar/dnmye/manual/imagenes/datos_abiertos.png" class="img-fluid" width="450"></p>
-<blockquote class="blockquote">
-<p>Internamente, la DNMyE se organiza a partir de 3 grandes equipos o áreas que, aunque en los hechos no sean compartimentos estancos y el diseño se propone transversal, pueden ser definidas por su misión primaria:</p>
-<ul>
-<li><p><strong>ECONOMÍA</strong>: realizar seguimiento de indicadores de actividad del sector en particular y la economía en general; generar reportes de evaluación de políticas y proyecciones. Ejemplo de estos procesos se encuentran en el Capítulo <a href="https://tableros.yvera.tur.ar/dnmye/manual/economia-del-turismo.html#economia-del-turismo">3</a>;</p></li>
-<li><p><strong>ESTADÍSTICA</strong>: hacer seguimiento y coordinación de los operativos estadísticos (ETI, EOH, EVyTH), la producción de la Cuenta Satélite de Turismo de Argentina (CST-A) y del trabajo con equipos de datos o estadísticas de turismo en las jurisdicciones (provincias y municipios), tal como se detalla en el Capítulo <a href="https://tableros.yvera.tur.ar/dnmye/manual/operativos-estadisticos.html#operativos-estadisticos">1</a>;</p></li>
-<li><p><strong>DATOS</strong>: proponer flujos de trabajo reproducibles y sistematizados; generación de software, tableros y reportes; desarrollo de nuevas fuentes de datos.</p></li>
-</ul>
-</blockquote>
-<p><img src="https://tableros.yvera.tur.ar/dnmye/manual/imagenes/roceta.png" class="img-fluid" width="2000"></p>
-<blockquote class="blockquote">
-<p>El diagrama anterior resume en buena medida estas mesas de trabajo de la DNMyE y agrega dos <em>espacios</em> más, vinculados en buena medida con el trabajo del equipo de <strong>DATOS</strong>:</p>
+<div class="cell" data-paged.print="false">
+<iframe src="https://www.youtube.com/embed/vDrENxBXdJE" width="672" height="400px" data-external="1">
+</iframe>
+</div>
+<p>Hace unos poco días <a href="https://twitter.com/avdata99">Andrés Vázquez</a> me invitó junto a un conjunto de personas (especialistas en datos abiertos, cientistas de datos, economistas, informáticos y desarrolladores de software) a responder <span class="math inline">\(3\)</span> preguntas que tienen que ver con los desafíos de la apertura de datos en el contexto de la crísis de la pandemia del <em>Covid19</em>.</p>
+<p><strong><a href="https://avdata99.github.io/cadena-de-datos/s02e34-pandemia-de-datos.html">Cadena de Datos / Episodio 34</a></strong>: <em>En este contexto de crisis y preocupación por la pandemia donde todos queremos saber que paso ahora, que tan grave es y que va a pasar en las próximas semanas me surgen algunas dudas acerca de las políticas de apertura y uso de los datos relacionados a este tema</em>.</p>
+<hr>
+<p>Mi reacción se centró en dos ejes: (1) la demanda de datos por parte del <em>público en general</em> (como lo llamó <a href="https://twitter.com/Diego_Koz">Diego Kozlowski</a> en su propia intervención) y (2) cómo esto se relaciona con la mala información y la desinformación.</p>
 <ol type="1">
-<li><p><strong>ARMONIZACIÓN</strong> - organiza el trabajo federal que se hace con provincias y municipios y llevando adelante el desarrollo del <a href="https://datatur.yvera.tur.ar/"><strong>Sistema Federal de Gestión de Datos Turísticos de la Argentina - <code>&lt;data&gt;TUR</code></strong></a>;</p></li>
-<li><p><strong>COMUNICACIÓN</strong> - aglutina flujos de trabajo y procesos detrás del <a href="https://www.yvera.tur.ar/sinta/"><strong>Sistema de Información Turística de la Argentina (SINTA)</strong></a>, la plataforma que desarrollamos y mantenemos para atacar el déficit de comunicación y democratizar el acceso a la producción de la DNMyE (ver Capítulo <a href="https://tableros.yvera.tur.ar/dnmye/manual/comunicacion-sinta.html#comunicacion-sinta">4</a>).</p></li>
+<li>Como usuario aficionado a los datos públicos creo en la importancia del desarrollo y apertura de datos. Entiendo que una mayor disponibilidad de estos, en formatos en los que podamos reutilizarlos es saludable, al proveer a la comunidad de usuarios de datos insumos que favorecen un proceso de democratización del conocimiento. Existen experinecias que desde la sociedad civíl han empujado el desarrollo de plataformas de datos abiertos en otros niveles. Aunque no son los únicos, ejemplos como el <code>GgastoPublicoBahiense</code> o <a href="http://datar.info/en/">dat.ar</a> son muestra de ello. Y, si bien falta, en Argentina venímos transitando un camino positivo. Aunque con ciertos déficits, gobiernos locales, provinciales y dependencias del gobierno nacional han ido dando pasos en este sentido.</li>
 </ol>
-<blockquote class="blockquote">
-<p><em>(Una versión de este desarrollo se presentó como ponencia en la conferencia internacional csv,conf,v7 que tuvo lugar en la Ciudad de Buenos Aires los días 19 y 20 de abril de 2023)</em> <sup><a href="https://tableros.yvera.tur.ar/dnmye/manual/#fn1">1</a></sup></p>
-</blockquote>
-</blockquote>
-<p>Entonces, dejo acá este <a href="https://tableros.yvera.tur.ar/dnmye/manual/">documento vivo</a>, que resume en buena medida buena parte de lo que trabajamos estos casi tres años con el maravilloso equipo que me toco en suerte conducir, y con el cual contamos con el apoyo y acompañamiento de todo el equipo de gestión que armó Matías Lammens al frente del MINTURDEP. En su nombre, muchas gracias a todoxs, de quienes aprendí mucho y me llevo el mejor de los recuerdos.</p>
-<p>Fue un gran placer. Y, para mí, un gran orgullo el trabajo realizado.<br>
-<br>
-Seguimos!</p>
+<p>Ahora, creo que en el contexto de la pandemia esta <em>virtud</em> encuentra un límite más restrictivo que lo usual en la capacidad y recursos que los estados tiene a mano para poder responder y que ellos deben ser destinados a resolver los cuellos de botella que la crisis implica.</p>
+<ol start="2" type="1">
+<li>Por otro lado pienso que el uso de datos que muchas veces hacemos quienes conformamos la comunidad de usuarios debe hacerse con mayor responsabilidad. Sobre todo teniendo en cuenta los costos que pueden generar, no solo la <em>(a) desinformación</em> ( ~ <em>fake news</em>), que en general es intencional, sino la <em>(b) mala información</em> o información erronea.</li>
+</ol>
+<p>Para ilustrar la primera podemos recurrir al político tuitero más famoso del mundo:</p>
+<div class="cell" data-paged.print="false">
+<div class="cell-output-display">
+<p><img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/12/18/15/trump.jpg" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Ese mapa que Trump compartió en medio de la discusión por el juicio político en el Congreso de EE.UU. buscaba contar una historia: <strong>la mayoría de los noreteamericanos me apoya a mí</strong>. Muchos salieron a contestarle mostrando que esa manera de presentar la información era <em>mentirosa</em>. Otra mirada posible de los mismos datos (en los que se pone el foco en la densidad poblacional y no ya en los kilometros de extensión del territorio), y más certera desde el punto de vista de lo que se estaba discutiendo, es representada en la siguiente ilustración:</p>
+<div class="cell" data-paged.print="false">
+<div class="cell-output-display">
+<p><img src="https://imgs.xkcd.com/comics/2016_election_map_2x.png" class="img-fluid" style="width:100.0%"></p>
+</div>
+</div>
+<p>Pero, como mencionaba antes, no siempre se trata de la publicación de información falsa intencionalmente. Muchas veces lo que puede suceder es que se distribuya información erronea o poco precisa, por la falta de conocimiento de dominioo metodologías particulares Y creo que, si bien esto sucede con muchos temas y áreas de estudio, es particularmente sensible en un contexto crítico y específico como el de la pandemia. Y que los costos potenciales asociados a la <em>viralización</em> de contenido erroneo es un tema sobre el que deberíamos tener especial atención.</p>
+<p>Con ello no quiero decir que la comunidad de usuarios de datos no tenga un rol que cumplir; que deba mantenerse aislada de la discusión y que no haya espacio para aportes. Pero quizás no sea éste el de analizar y compartir en sus redes sociales la evolución epidemoiológica o de las consecuencias potenciales que puede tener el virus en salud. Se puede, por ejemplo, trabajar al servicio de otras áreas que puedan requerir colaboración por los efectos asociados a la cuarentena. Me valgo del ejemplo del <a href="https://gefero.shinyapps.io/mapa_acc/">trabajo</a> que coordina el <em>Data Sociologist</em> <a href="https://gefero.github.io/">Germán Rosati</a>, en el que se propusieron calcular el tiempo que demoran los habitantes de un radio censal en caminar hasta un cajero automático, un almacén o lugares similares. O tambien se puede colaborar brindando herramientas a partir de los datos con la que expertos en temas específicos de la pandemia puedan ver facilitado sus análisis. Pero, definitivamente, pienso que deberíamos limitar nuestro impetú en descargarnos un <em>dataset</em> y generar una visualización bonita para compartir publicamente. Y en muchos casos no colaboran al mejor entendimiento de lo que nos sucede, sino que tiene efectos nocivos sobre la calidad de información que circula.</p>
+<div class="cell">
+<div class="cell-output-display">
+{{% tweet "1243158103069274112" %}}
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

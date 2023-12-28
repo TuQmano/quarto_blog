@@ -1,0 +1,16 @@
+{
+  "hash": "5e259e1e4efcc4228c91ccb21f95fbad",
+  "result": {
+    "markdown": "---\ntitle: 'LatinR2019 ha muerto... que viva LatinR2020'\nauthor: TuQmano\ndate: '2019-09-30'\nslug: latinr2019-ha-muerto-que-viva-latinr2020\ncategories: [LatinR]\n\n---\n\n\n\n\nTerminó nomás la segunda edición de [#LatinR](https://latin-r.com/). Tres días a pleno con  _workshops_, exposiciones plenarias, presentaciones y posters. Diversidad de disciplinas, participantes de casi toda nuestramerica e invitados super grosos. Donde no solo aprendí cuestiones técnicas y nuevas herramientas, sino también el ejericio constante de reforzar el trabajo colaborativo dentro de una comunidad diversa y plural.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](data/hadley_tuq.jpg){width=301}\n:::\n:::\n\n\n\nYo en particular tuve la gran oportunidad además de (a) participar de un genial taller sobre el desarrollo de paquetes, con el messi de este lío (H.Wickham - arriba); y (b) mostrar parte del trabajo y aprendizaje desde aquel ya lejano `#LatinR2018`. \n\nAcá se puede acceder al `shiny` app de [Inteligencia Electoral](http://inteligenciaelectoral.mentacomunicacion.com.ar/). Acá las [slides](https://www.researchgate.net/publication/336145088_Inteligencia_Electoral) de la presentación y acá el [abstract](https://www.researchgate.net/publication/336145098_Inteligencia_Electoral_comportamiento_y_campanas).\n\n\n---\n## `LatinR` en la red del pajarito \n\nTwitter es un gran lugar para estar conectado con las novedades de [#rstats](https://twitter.com/search?q=rstatsES). Y `LatinR` nos dió la posibilidad de poder ponerle cara a un montón de `@rrobas` con los que uno interactúa cotidianamente en esa conexión. Algo de todo esto se pudo vivir a través de twitter detrás del _hashtag_ `#LatinR2019`. Los gráficos de abajo son una muestra de eso.    \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](2019-09-30-latinr2019-ha-muerto-que-viva-latinr2020_files/figure-html/contributors-1.png){width=672}\n:::\n:::\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![](data/grafo-1.png){width=672}\n:::\n:::\n\n\n\n[Zoom](https://github.com/TuQmano/data_TuQmanoR/blob/master/latinr_network.png) al grafo. \n\nYa pasaron Buenos Aires (2018) y Santiago (2019). Llega el turno de `LatinR2020` en Montevideo. \n\n",
+    "supporting": [
+      "2019-09-30-latinr2019-ha-muerto-que-viva-latinr2020_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

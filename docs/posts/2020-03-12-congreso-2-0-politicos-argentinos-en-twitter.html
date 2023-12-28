@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Juan Pablo Ruiz Nicolini">
+<meta name="dcterms.date" content="2019-12-20">
+
+<title>DiaRio de un TuQmano - Congreso 2.0: politicos argentinos en Twitter</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DiaRio de un TuQmano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">El TuQmano</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tuqmano" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tuqmano" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Congreso 2.0: politicos argentinos en Twitter</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Twitter</div>
+                <div class="quarto-category">Politics</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juan Pablo Ruiz Nicolini </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 20, 2019</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>(<strong><em>Juan Pablo Ruiz Nicolini, Camila Higa, Franco Galeano y Carolina Rossi</em></strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>)</p>
+<p>La conformación de un nuevo cuerpo legislativo para los próximos dos años en Argentina nos motivó a hacer un análisis de la estructura, funcionamiento e interacciones de las cuentas de Twitter de los legisladores nacionales que conformarán el Congreso de la Nación durante el periodo 2019 - 2021.</p>
+<p>Tal como hiciéramos respecto a las cuentas de legisladores pertenecientes al Senado de la Nación (<a href="https://mentacomunicacion.github.io/2019/12/12/senado2-0/">disponible acá</a>), en los siguientes apartados nos proponemos hacer una <em>radiografía</em> de la Cámara de Diputados.</p>
+<section id="diputados2.0" class="level1">
+<h1>Diputados2.0</h1>
+<p>Un <span class="math inline">\(9.3\%\)</span> de los miembros de la cámara baja (<span class="math inline">\(24/257\)</span>) no tiene cuenta activa en Twitter. El gráfico que sigue muestra tanto la distribución política como la cantidad de legisladores de cada espacio por fuera del ecosistema digital a ser analizado. El <span class="math inline">\(80\%\)</span> de ellas corresponden al oficialismo y el <span class="math inline">\(20\%\)</span> a la oposición.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ggparliament_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Qué sabemos de las cuentas de diputadas y diputados que están presentes en Twitter?</strong></p>
+<ol type="1">
+<li><p>Que si agregamos todos sus “amigos” (<em>follows</em>) el total asciende a más de <span class="math inline">\(248_{mil}\)</span> cuentas. Pero al contar usuarios únicos el número se reduce a poco más de <span class="math inline">\(123.7_{mil}\)</span>.</p></li>
+<li><p>Aunque una cuenta sigue típicamente a unos <span class="math inline">\(598\)</span> usuarios, el promedio se eleva hasta <span class="math inline">\(1058\)</span> cuentas. Ello se debe a que en la distribución se observan cuentas que son mucho más <em>seguidoras</em>. Tal es el caso de <code>LucilaLehmann</code> con sus más de <span class="math inline">\(22_{mil}\)</span> <em>seguidos</em>, por ejemplo.</p></li>
+<li><p>Por otro lado, analizamos tres indicadores para medir al funcionamiento individual de cada una de las cuentas de la muestra: <em>Frecuencia</em> y <em>Reacciones</em> promedio de cada publicación y el <em>Alcance potencial</em>, medido en cantidad de seguidores de cada perfil.</p></li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/boxplots_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Además de las observaciones individuales los gráficos de cajas muestran la distribución. La línea horizontal representa la mediana de cada uno de los indicadores.</p>
+<p>Estos son los valores que dividen a las muestras en dos mitades:</p>
+<ul>
+<li><strong>Frecuencia promedio</strong>: <span class="math inline">\(0.5\)</span> tuits por día</li>
+<li><strong>Reacciones promedio por publicación</strong>: <span class="math inline">\(38.5\)</span></li>
+<li><strong>Seguidores</strong>: <span class="math inline">\(5063\)</span></li>
+</ul>
+<p>Se nominaron, además, las cuentas de los <span class="math inline">\(10\)</span> perfiles de mayor alcance potencial (<span class="math inline">\(+\)</span> seguidores), para todos los indicadores.</p>
+<section id="métricas-de-funcionamiento-de-las-cuentas" class="level3">
+<h3 class="anchored" data-anchor-id="métricas-de-funcionamiento-de-las-cuentas">Métricas de funcionamiento de las cuentas:</h3>
+<section id="alcance-potencial" class="level4">
+<h4 class="anchored" data-anchor-id="alcance-potencial"><span class="math inline">\(1.\)</span> Alcance potencial</h4>
+<p>Definimos el alcance potencial de cada cuenta en función de la cantidad de seguidores. El gráfico siguiente muestra las primeras <span class="math inline">\(10/233\)</span>. Con <span class="math inline">\(1.1_{millones}\)</span> de seguidores, la cuenta del presidente de la Cámara de Diputados Sergio Massa se destaca por sobre la del resto de las diputadas y diputados del <em>ranking</em>. Le siguen Daniel Filmus (<span class="math inline">\(348_{mil}\)</span>) y Fernando Iglesias (<span class="math inline">\(272_{mil}\)</span>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ratio_ff_top10.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Pero, además de considerar la cuenta absoluta, también puede evaluarse en relación a la cantidad de cuentas que ellos mismos siguen (construyendo un ratio <span class="math inline">\(seguidores/seguidos\)</span>). En el gráfico esto está representado por el tamaño del círculo: cuanto más grande, mayor el valor del ratio. Así, por ejemplo, la cuenta de Leopoldo Moreau tiene el ratio más bajo (<span class="math inline">\(130_{mil} / 1840 = 70.9\)</span>), por lo que el punto es casi indistinguible del segmento. Si lo comparamos, por ejemplo, con la cuenta de Daniel Filmus los valores serían los siguientes: <span class="math display">\[348.6_{mil} / 598 = 560.6\]</span></p>
+<p>En la cola del <em>ranking</em> <span class="math inline">\(8/10\)</span> cuentas no superan la barrera de los <span class="math inline">\(300\)</span> seguidores y <span class="math inline">\(6\)</span> de ellos tienen menos de <span class="math inline">\(200\)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ratio_ff_bottom10.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="frecuencia-de-publicaciones" class="level4">
+<h4 class="anchored" data-anchor-id="frecuencia-de-publicaciones"><span class="math inline">\(2.\)</span> Frecuencia de publicaciones</h4>
+<p>Otro comportamiento que podemos medir se focaliza en el nivel de actividad. Es decir, en la frecuencia promedio con la que las cuentas de diputadas y diputados publican contenido orgánico. Para ello analizamos la totalidad de las publicaciones de cada cuenta para los últimos <span class="math inline">\(6\)</span> meses. El principal elemento a destacar es la distancia entre el líder del <em>ranking</em> y el resto de las cuentas de sus colegas. Con <span class="math inline">\(25.3\)</span> publicaciones diarias más que duplica a la escolta Gabriela Cerruti (<span class="math inline">\(10.3\)</span>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ratio_activos_top10.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="interacciones" class="level4">
+<h4 class="anchored" data-anchor-id="interacciones"><span class="math inline">\(3.\)</span> Interacciones</h4>
+<p>Por último, analizamos el promedio de interacciones (suma de <strong>Me Gusta</strong> y <strong>Retweet</strong> que recibe una publicación determinada).</p>
+<p>Solo <span class="math inline">\(4\)</span> cuentas superan las <span class="math inline">\(2000\)</span> interacciones promedio por publicación: Paula Oliveto, WW, Mariana Zuvic y Mario Raul Negri.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ratio_rendimiento_top10.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="los-del-bloque-sean-unidos" class="level2">
+<h2 class="anchored" data-anchor-id="los-del-bloque-sean-unidos">Los del bloque sean unidos…</h2>
+<p><strong>¿Cómo se vinculan las cuentas de legisladores según los espacios políticos?</strong> Para dar una respuesta podemos indagar cuáles de las cuentas de legisladores es seguida por sus pares en Twitter. De este modo es posible construir un grafo que nos permita describir la intensidad de los vínculos. Esto es, la relación de amistad entre miembros de las cámaras.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/igrap_dip_plot.PNG" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Cada círculo corresponde a una cuenta de una diputada o diputado (<em>nodo</em>).</li>
+<li>Las flechas (<em>aristas</em>) marcan la dirección de la conexión. Esto es, quién <em>sigue</em> a quién.</li>
+<li>Los colores son asignados luego de haber agrupado cada una de las cuentas con un método de <em>clusterización <a href="https://igraph.org/r/doc/cluster_walktrap.html">random walk</a></em>, el cual ordena las cuentas en función de las relaciones entre las mismas definiendo comunidades.</li>
+</ol>
+<p>Previsiblemente se visualiza una mayor intensidad de conexiones entre miembros de cada uno de los espacios políticos: mayor cantidad de conexiones azules entre miembros del Frente de Todos y mayor cantidad de conexiones amarillas entre los de la oposición.</p>
+<p><a href="https://mentacomunicacion.github.io/interactivos/dip_igraph.html">Una versión interactiva</a> nos permite seleccionar a los distintos usuarios para visualizar la red que conforman sus relaciones individuales. Tomemos como ejemplo los vínculos que se generan con la cuenta <code>ljuez</code> como <em>nodo</em> de referencia. Allí se observa que casi la totalidad de sus vínculos se dan con el <em>cluster</em> más afin a su espacio político salvo con una única cuenta del oficialismo: <code>sergiomassa</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/igrpah_ljuez.PNG" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li>Tres diputadas son seguidas por solo un colega: <code>MelinaDelu</code>, <code>Adriana_Ruarte</code> y <code>graciela_navarr</code>.</li>
+<li>Con <span class="math inline">\(119\)</span> colegas que lo <em>siguen</em>, <code>sergiomassa</code> lidera el ranking. Esto también es cierto cuando se restringe la cuenta para analizar solamente quién es el más seguido por opositores (<span class="math inline">\(65\)</span>). Si calculamos en cambio quién es más seguido únicamente por miembros de un mismo espacio <code>marioraulnegri</code> lidera el <em>ranking</em> (<span class="math inline">\(88\)</span> seguidores).</li>
+<li><span class="math inline">\(50\)</span> de las cuentas siguen a menos de <span class="math inline">\(10\)</span> de sus pares.<br>
+</li>
+<li><code>sergiomassa</code> es también el más <em>seguidor</em> con <span class="math inline">\(146\)</span> de sus pares entre sus <em>follows</em>. Lo secunda <code>_alvarogonzalez</code> con <span class="math inline">\(98\)</span>.</li>
+</ul>
+<hr>
+</section>
+<section id="ecosistemas-políticos-en-twitter" class="level2">
+<h2 class="anchored" data-anchor-id="ecosistemas-políticos-en-twitter">Ecosistemas políticos en Twitter</h2>
+<p>Más allá del vínculo específico entre miembros de la Cámara de Diputados, la información recolectada nos permite avanzar sobre la totalidad de las cuentas. Como veremos a continuación, al analizar el listado de <em>seguidos/amigos</em> de cada legislador podemos hechar luz sobre sus posicionamientos políticos con información sobre sus conexiones que excede los límites de la Cámara. Sabemos que la suma de <em>amigos</em> de diputados alcanza unas <span class="math inline">\(123_{mil}\)</span> cuentas distintas. Pero, ¿cuáles son más representativas entre los seguidos por diputados? ¿Qué diferencias se pueden encontrar según el alineamiento político?</p>
+<p><strong>Cuentas más seguidas</strong></p>
+<p>El gráfico que sigue muestra las 30 cuentas más seguidas por diputados argentinos. Entre ellas se destacan cuentas institucionales (<code>@DiputadosAR</code>, <code>@CasaRosada</code> y <code>@SenadoArgentina</code>); de medios (<code>@LANACION</code>, <code>@infobae</code>, <code>@AgenciaTelam</code>, <code>@todonoticias</code> y <code>@perfilcom</code>); de periodistas (<code>@Gatosylvestre</code>y <code>@majulluis</code>) y de dirigentes políticos (<code>@mauriciomacri</code>, <code>@marquitospena</code>, <code>@CFKArgentina</code>, <code>@mariuvidal</code>, y <code>@alferdez</code>, entre otros).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/top_follows_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La diferencia de <em>seguidos</em> por espacio político en la Cámara de Diputados son notorias para esta muestra. Solamente <span class="math inline">\(4/30\)</span> cuentas analizadas son más seguidas por legisladores pertenecientes al Frente de Todos (<code>alferdez</code>, <code>CFKArgentina</code>, <code>danielscioli</code> y <code>Gatosylvestre</code>). Las cuentas <code>Pontifex_es</code> y <code>SergioMassa</code>, en tanto, son las más cercanas a una <em>zona de empate</em>. Al revés, la mayoría de las cuentas de medios y periodistas y, más lejos, dirigentes de la <em>oposición</em> tienen un claro sesgo de <em>seguidos</em> a favor de diputadas y diputados de ese espacio político.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/rank_dif_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Para profundizar al respecto nos propusimos en primer lugar replicar el análisis de <a href="https://twitter.com/kearneymw/status/1187362531859259392?s=09">Michael Kearney</a> sobre el 116º Congreso de Estados Unidos analizando las cuentas de les diputades de Argentina.</p>
+<section id="cuentas-seguidas-por-diputadas-y-diputados-de-argentina-2019-2021" class="level4">
+<h4 class="anchored" data-anchor-id="cuentas-seguidas-por-diputadas-y-diputados-de-argentina-2019-2021">Cuentas seguidas por diputadas y diputados de Argentina (2019-2021)</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/scatter_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Mientras el eje horizontal representa la cantidad de cuentas del oficialismo que siguen a cada uno de los más de <span class="math inline">\(123_{mil}\)</span> perfiles de la muestra, el eje vertical lo hace respecto de la oposición. Se destacan los nombres de perfil de todas las cuentas que tienen entre <span class="math inline">\(60\)</span> y <span class="math inline">\(75\)</span> seguidores según los espacios políticos. Estos fueron coloreados en <b style="color:red"> rojo (oposición)</b> y <b style="color:blue">azul (oficialismo)</b> según la predominancia de uno respecto del otro y se marcó en verde la <em>zona de empate</em> (cuando la diferencia entre los dos fue menor a <span class="math inline">\(20\)</span>, un <span class="math inline">\(8.5\%\)</span> de las cuentas de diputados, aproximadamente).</p>
+<hr>
+<p>Un ejercicio alternativo fue poner el foco en la cuentas más seguidas para cada espacio político. Para ello restringimos el <em>ranking</em> luego de ordenar los datos minimizando la cantidad de seguidores de cada uno de los espacios. Estas cuentas se encuentran más pegadas a los ejes respectivos de cada ecosistema en el gráfico anterior. Las tablas que siguen <em>rankean</em> estas cuentas bajo <span class="math inline">\(2\)</span> condiciones ordenando según prevalencia de seguidores <strong>(i)</strong> oficialistas y <strong>(ii)</strong> opositores.</p>
+<p>Así, cuando ponemos el foco sobre las <strong>cuentas más seguidas por oficialistas</strong>, observamos entre las 10 principales a cuentas partidarias (<code>FrenteDeTodos</code>, <code>p_justicialista</code> , <code>EquipoCFK</code> y <code>FpVNacional</code>) o de dirigentes afines (<code>Vsiley</code>, <code>MontenegroViki</code>, <code>dipwlatercorrea</code>, <code>vtolosapaz</code> y <code>jorgeferraresi</code>) .</p>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">+ Oficialistas</th>
+<th style="text-align: center;"><b style="color:red">OPOSICION</b></th>
+<th style="text-align: center;"><b style="color:blue">OFICIALISMO</b></th>
+<th style="text-align: center;"><b>TOTAL </b></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">FrenteDeTodos</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">62</td>
+<td style="text-align: center;">63</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">p_justicialista</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Vsiley</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">43</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">MontenegroViki</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">39</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EquipoCFK</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">38</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">dipwaltercorrea</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">FpVNacional</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">36</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">vtolosapaz</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">36</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">jorgeferraresi</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">LuciMasin</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">35</td>
+</tr>
+</tbody>
+</table>
+<p>Lo mismo sucede si ponemos el foco en las <strong>cuentas más seguidas por opositores</strong>, una vez que se minimiza la cantidad de oficialistas que siguen a esas mismas cuentas. Observamos en los 10 más seguidos a dirigentes radicales (<code>SalvadorPBA</code>, <code>alechegarayUCR</code>) y del PRO (<code>SchiavoniH</code>, <code>moralesfederico</code>). Se destacan también la cuenta institucional <code>juntoscambioar</code>.</p>
+<table class="table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 22%">
+<col style="width: 27%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">+ Opositores</th>
+<th style="text-align: center;"><b style="color:red">OPOSICION</b></th>
+<th style="text-align: center;"><b style="color:blue">OFICIALISMO</b></th>
+<th style="text-align: center;"><b>TOTAL </b></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">juntoscambioar</td>
+<td style="text-align: center;">91</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">92</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">SalvadorPBA</td>
+<td style="text-align: center;">49</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">50</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">dante_sica</td>
+<td style="text-align: center;">44</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">45</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">LuisBorsani</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">43</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">SchiavoniH</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">43</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">moralesfederico</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">39</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">EduardoCostaSC</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">38</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">metchecoin</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">alechegarayUCR</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">37</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Calivillalonga</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">35</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote class="blockquote">
+<p><em>Los motivos para “seguir” o “ser seguido” por un político son variados, y van desde la afinidad partidaria, cultural o territorial hasta el espionaje, pasando por el consumo irónico. Sin embargo, la intuición sugiere que la afinidad prevalece y la evidencia lo confirma: los políticos siguen a más “amigos” que a rivales. Como la decisión de a quién seguir es pública, con ella envían señales de pertenencia y de reciprocidad tanto a los votantes como a sus potenciales aliados</em>. — <a href="https://www.elestadista.com.ar/?p=4112">Calvo y Malamud</a></p>
+</blockquote>
+</section>
+</section>
+<section id="amigos-son-los-amigos" class="level2">
+<h2 class="anchored" data-anchor-id="amigos-son-los-amigos"><strong>Amigos son los amigos</strong></h2>
+<p>Con la identificación de todas esas cuentas construimos una matriz en la que cada fila se corresponde con un diputado y cada columna con cada uno de estos “amigos”. En las celdas, en tanto, se asignó un <span class="math inline">\(1\)</span> cuando la cuenta de un legislador sigue a una cuenta y con un <span class="math inline">\(0\)</span> cuando no lo hace.</p>
+<p>El paso siguiente fue calcular cómo correlaciona la lista de <code>seguidos</code> de cada una de las cuentas de legisladores comparada con sus pares. Visualmente puede analizarse de la siguiente manera:</p>
+<section id="diputados" class="level4">
+<h4 class="anchored" data-anchor-id="diputados">DIPUTADOS</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/corrplot_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Los ejes listan cada una de las cuentas analizadas de la muestra de Diputados de la Nación (agrupadas por espacio político). La diagonal inferior (azul oscuro) muestra una correlación positiva perfecta (<span class="math inline">\(1\)</span>), dado que las observaciones corresponden a la misma cuenta en filas y columnas. Así, para el resto de las cuentas con las que se compara cada usuario, cuanto más azul, la correlación será más alta (los usuarios que siguen las cuentas son más similares) y cuanto más rojo, los “amigos” de ese par de cuentas difieren más.</p>
+<p>Rápidamente se observa que en líneas generales hay una asociación positiva entre cuentas del Frente de Todos (el oficialismo, con las etiquetas en azul) y de la oposición (agrupadas con distintos colores por pertenencia de bloque dentro del interbloque Juntos por el Cambio u Otros).</p>
+<p>Por último, al comparar entre cuentas pertenecientes a polos distintos la tendencia es a la inexistencia de relación (más blanco, con valores cercanos a <span class="math inline">\(0\)</span>; o una asociación negativa, con tonos más rojos).</p>
+<hr>
+<p>El siguiente gráfico ubica en un plano a los dos primeros <a href="https://es.wikipedia.org/wiki/An%C3%A1lisis_de_componentes_principales">componentes principales</a> (que explican la mayor variabilidad de los datos de la matriz de usuarios seguidos por diputados)<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. El gráfico ordena los <code>@</code> en distintos espacios y destaca la pertenencia política de cada uno.</p>
+<p>La parte superior agrupa la mayoría de las cuentas del nuevo oficialismo bajo la etiqueta <strong>Frente de Todos</strong>. En la parte inferior, en tanto, se agrupan los usuarios identificados bajo el espacio <strong>Juntos por el Cambio</strong>, en el cual se destacan también las distintas pertenencias políticas originales (UCR, PRO, CC y Otros).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/PCA_dip.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>(<em>Figura en alta resolución disponible <a href="https://raw.githubusercontent.com/mentaComunicacion/data_posts/master/congreso2.0/figs/PCA_dipNom.png">acá</a></em>)</p>
+<p>Una mirada más detallada nos permite encontrar elementos salientes. Por ejemplo, considerando el espacio oficialista, se destacan la lejanía de <code>gallegopm</code>, <code>cbritezmisiones</code> y <code>juanmosqueda_ar</code> del centro del <strong>Frente de Todos</strong> (ocupado por cuentas como <code>pablocarrook</code> y <code>marabrawer</code>).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/PCA_dip_fdt.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>En tanto, al observar el sub espacio de <strong>Juntos por el Cambio</strong> se observa una distribución bastante centrada de la nube amarilla con miembros de las distintas fuerzas que lo componen (PRO, CC y UCR) con algunas cuentas más alejadas como <code>lucilalehmann</code>, <code>sebasnsalvador</code>, <code>alvarodlamadrid</code> y <code>dinarezi</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/PCA_dip_cambiemos.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>La mayor parte de las cuentas identificadas como <em>Otros</em> se ubican en una posición intermedia donde se cruzan las nubes de los dos espacios principales. Allí se observa por ejemplo a <code>rominadelpla</code> y <code>nicolasdelcano</code> del Frente de Izquierda y a miembros de bloques menores como <code>paulocassinerio</code>, <code>almasapag</code> y <code>joseluisramon</code> (más aislado del resto de sus colegas).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/PCA_dip_intermedio.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="el-público-siempre-tiene-la-razón" class="level2">
+<h2 class="anchored" data-anchor-id="el-público-siempre-tiene-la-razón">El público siempre tiene la razón</h2>
+<p>Un último ejercicio consistió en revisar <strong>cómo interactúa el público</strong> con las publicaciones emitidas desde las cuentas de diputados. Como ya desarrollamos en una <a href="https://mentacomunicacion.github.io/2019/11/13/interacciones-en-twitter/">entrada previa</a>, les usuaries interactúan con el contenido de tres formas<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>:</p>
+<ul>
+<li><code>fav</code> (me gusta - MG): la acción que menos exige / expone al que interactúa. La reacción más común en Twitter.</li>
+<li><code>retweet</code> (re publicación - RT): mantiene la economía de esfuerzo del anterior, pero hace más visible la interacción con el resto.</li>
+<li><code>reply</code> (respuesta - RP): el tipo de reacción que implica mayor esfuerzo al tener que elaborar una respuesta.</li>
+</ul>
+<p><strong><em>“Si tuviste más respuestas a un tuit que favs o RT, entonces la cagaste”</em></strong>. Cuando el <code>RATIO</code> (originalmente descripto <a href="https://www.esquire.com/news-politics/news/a54440/twitter-ratio-reply/">acá</a>) toma valores altos es indicador de que la recepción del tuit fue muy mala.</p>
+<p><span class="math display">\[RATIO = \frac{Respuestas}{Favs + RT} *100\]</span></p>
+<p>La forma de graficarlo para visualizarlo es también simple a partir de gráficos ternarios. Estos muestran la relación entre las tres variables (<code>retweet</code>, <code>fav</code> y <code>respuesta</code>), donde los vértices del triángulo representan a cada una de ellas. Cuanto más se acerca un punto (un tweet) a un vértice, mayor es el valor de esa variable respecto de las otras. Por ende, cuanto más se expande la nube de puntos de la pared derecha (segmento que une los <code>fav</code> y <code>rt</code>) más alto será el valor del <code>RATIO</code>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/ternarioDip.PNG" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>El gráfico anterior muestra el ratio promedio para cada una de las <span class="math inline">\(233\)</span> cuentas de la muestra, coloreadas según el espacio político de pertenencia. Los valores son relativamente bajos para la mayoría de las cuentas. En la <a href="https://mentacomunicacion.github.io/interactivos/dip_ternario.html">versión interactiva</a> es posible explorar a la totalidad de los <em>tuits</em> emitidos por cada una de las cuentas junto al cálculo del <em>ratio</em> correspondiente a lo largo del tiempo.</p>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Originalmente publciado en <strong><em><a href="https://mentacomunicacion.github.io/2019/12/20/diputados2-0/"><b style="color:#179E8D">https://mentacomunicacion.github.io/</b></a></em></strong><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Técnica estadística que consiste en obtener la mayor cantidad de información posible de un conjunto de datos construyendo variables latentes a partir de las variables existentes en la que se observan correlaciones y reducir la dimensionalidad del fenómeno. Las componentes son combinaciones lineales de las variables originales y se espera que solo unas pocas recojan la mayor parte de la variabilidad de los datos.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Existe otra acción posible - citar tweet - pero se entiende que esta es una nueva intervención sobre una publicación existente y no simplemente una reacción.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Juan Pablo Ruiz Nicolini">
+<meta name="dcterms.date" content="2020-05-22">
+
+<title>DiaRio de un TuQmano - polaR on CRAN</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">DiaRio de un TuQmano</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html" rel="" target="">
+ <span class="menu-text">El TuQmano</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/tuqmano" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/tuqmano" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">polaR on CRAN</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">CRAN</div>
+                <div class="quarto-category">r-pkg</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Juan Pablo Ruiz Nicolini </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 22, 2020</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Publicaron en CRAN una primera versión del paquete <a href="https://electorarg.github.io/polAr/">polAr</a>: <em>-POLítica ARgentina usando R</em>. En este post intentaré detallar un poco más el proceso de trabajo con el que llegamos hasta acá y, como yapa, el de <a href="https://electorarg.github.io/geofaceteAR/">geofaceteAr</a>.</p>
+<section id="polar" class="level2">
+<h2 class="anchored" data-anchor-id="polar">polAr</h2>
+<p></p><div id="tweet-43853"></div><script>tweet={"url":"https:\/\/twitter.com\/CRANberriesFeed\/status\/1261597845808975872","author_name":"CRAN Package Updates","author_url":"https:\/\/twitter.com\/CRANberriesFeed","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003ENew CRAN package polAr with initial version 0.1.3 \u003Ca href=\"https:\/\/t.co\/0QdYpl5sce\"\u003Ehttps:\/\/t.co\/0QdYpl5sce\u003C\/a\u003E \u003Ca href=\"https:\/\/twitter.com\/hashtag\/rstats?src=hash&amp;ref_src=twsrc%5Etfw\"\u003E#rstats\u003C\/a\u003E\u003C\/p\u003E&mdash; CRAN Package Updates (@CRANberriesFeed) \u003Ca href=\"https:\/\/twitter.com\/CRANberriesFeed\/status\/1261597845808975872?ref_src=twsrc%5Etfw\"\u003EMay 16, 2020\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-43853").innerHTML = tweet["html"];</script><p></p>
+<p>La idea del paquete es brindar herramientas que faciliten el flujo de trabajo del análisis político - electoral y el acceso a datos de Argentina usando <code>R</code>. Podriamos dividir las funciones de esta primera versión en tres familias: <em>(i) datos</em>, <em>(ii) indicadores</em> y <em>(iii) visualización</em>:</p>
+<section id="datos" class="level3">
+<h3 class="anchored" data-anchor-id="datos">datos</h3>
+<p>El paquete no incluye datos, sino que funciona como motor de búsqueda y descarga desde un repositorio alternativo. La idea detrás de ello es que funcione de modo indpendiente, que ésta pudiera ser aumentada o modificada sin efectos directos sobre el paquete. En una próxima publicación intetnaré avanzar sobre la documentación de este repositorio y un proceo de chequeo de información.</p>
+<p>La principal fuente de información es el siempre útil <a href="https://www.andytow.com/"><em>Atlas Electoral de Andy Tow</em></a>. Sitio que, además de ser la fuente de tabulados electorales más completa que existe en Argentina, disponibiliza las bases con los datos desagregados publicados por los escrutinios provisorios desde el año 2003 en adelante.</p>
+<p>El primer paso de lo acá compartido fue el procesamiento de esas bases de datos y el armado de un repositorio propio que me facilitara el trabajo de llamado de elecciones. En resumen: transformamos archivos <code>.mdb</code> (formato para tablas relacionles de <em>Microsoft Acces</em>) en <code>sqlite</code> para cada año electoral e hicimos consultas a esas basese de datos para obtener un archivo <code>.csv</code> para cada elección con una estrcutura así: <code>distrito_categoria_turno_año.csv</code>.</p>
+<p>Solo para las elecciones del proceso electoral de 2019 trabajamos con datos compartidos por <em>pmoracho</em> en <a href="https://github.com/pmoracho"><em>github</em></a>. Algo más de detalle del estado actual de todo esto esta disponible en el repositorio <a href="https://github.com/electorArg/PolAr_Data"><code>PolAr_Data</code></a>.</p>
+<p>Al día de hoy el repositorio cuenta con 425 archvios de elecciones para las catgorías a Presidente, Diputades y Senadores Nacionales, para elecciones generales, primarias (P.A.S.O.) y balotaje presidencial.</p>
+<p>Con <code>show_available_elections()</code> accedemos a un índice con la información disponible que podemos descargar:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 426 × 5
+   district category round  year  NOMBRE   
+   &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;    
+ 1 arg      presi    balota 2015  ARGENTINA
+ 2 arg      presi    gral   2003  ARGENTINA
+ 3 arg      presi    gral   2007  ARGENTINA
+ 4 arg      presi    gral   2011  ARGENTINA
+ 5 arg      presi    gral   2015  ARGENTINA
+ 6 arg      presi    gral   2019  ARGENTINA
+ 7 arg      presi    paso   2011  ARGENTINA
+ 8 arg      presi    paso   2015  ARGENTINA
+ 9 arg      presi    paso   2019  ARGENTINA
+10 caba     dip      gral   2005  CABA     
+# ℹ 416 more rows</code></pre>
+</div>
+</div>
+<p>Tomando los parámetros de la tabla anterior con el siguiente comando podemos completar los campos obligatorios para obtener los datos, en este caso de la elección general para presidente de 2019.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>arg19 <span class="ot">&lt;-</span> <span class="fu">get_election_data</span>(<span class="at">district =</span> <span class="st">"arg"</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">category =</span> <span class="st">"presi"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">round =</span> <span class="st">"gral"</span>, </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">year =</span> <span class="dv">2019</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>arg19</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 192 × 8
+# Groups:   codprov [24]
+   category round  year codprov name_prov    electores listas    votos
+   &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt;
+ 1 presi    gral   2019 01      CABA           2562670 00010     13662
+ 2 presi    gral   2019 01      CABA           2562670 00002     58652
+ 3 presi    gral   2019 01      CABA           2562670 00009   1051116
+ 4 presi    gral   2019 01      CABA           2562670 00005    714820
+ 5 presi    gral   2019 01      CABA           2562670 00001    129933
+ 6 presi    gral   2019 01      CABA           2562670 00004     37765
+ 7 presi    gral   2019 01      CABA           2562670 blancos   30994
+ 8 presi    gral   2019 01      CABA           2562670 nulos     14986
+ 9 presi    gral   2019 02      BUENOS AIRES  12504537 00010    149613
+10 presi    gral   2019 02      BUENOS AIRES  12504537 00002    272846
+# ℹ 182 more rows</code></pre>
+</div>
+</div>
+<p><code>arg19</code> es un <em>tibble</em> de <span class="math inline">\(192\)</span> filas y 8 variables. Las filas son el producto de 8 filas únicas por provincia (los 24 grupos) con la cantidad de votos obtenidos por las distintas opciones electorales en este turno, categoría y año.</p>
+<p>En este <a href="https://electorarg.github.io/polAr/articles/data.html">artículo</a> se puede encontrar más detalles de la función.</p>
+<hr>
+</section>
+<section id="indicadores" class="level3">
+<h3 class="anchored" data-anchor-id="indicadores">indicadores</h3>
+<p>El acceso a la información es quizás la función princiapl de <code>polAr</code>, la cual permitirá a usuaries trabajar con los datos como quieran. Pero el paquete incopora además funciones para realizar cálculos de interés para el análisis político. Esta primera versión solamente incluye dos varianes: <code>compute_nep()</code>, que devulelve el <em>Número Efectivo de Partidos</em> (según dos fórmulas distintas) y <code>compute_cometitiveness()</code>, que calcula el nivel de competencia de una elección determinada.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>arg19 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compute_competitiveness</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n=</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 24 × 5
+   codprov competitividad  year category round
+   &lt;chr&gt;            &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;
+ 1 01               0.836  2019 presi    gral 
+ 2 02               0.839  2019 presi    gral 
+ 3 03               0.790  2019 presi    gral 
+ 4 04               0.689  2019 presi    gral 
+ 5 05               0.909  2019 presi    gral 
+ 6 06               0.801  2019 presi    gral 
+ 7 07               0.778  2019 presi    gral 
+ 8 08               0.999  2019 presi    gral 
+ 9 09               0.637  2019 presi    gral 
+10 10               0.954  2019 presi    gral 
+11 11               0.878  2019 presi    gral 
+12 12               0.977  2019 presi    gral 
+13 13               0.881  2019 presi    gral 
+14 14               0.767  2019 presi    gral 
+15 15               0.900  2019 presi    gral 
+16 16               0.725  2019 presi    gral 
+17 17               0.862  2019 presi    gral 
+18 18               0.825  2019 presi    gral 
+19 19               0.967  2019 presi    gral 
+20 20               0.696  2019 presi    gral 
+21 21               0.993  2019 presi    gral 
+22 22               0.442  2019 presi    gral 
+23 23               0.765  2019 presi    gral 
+24 24               0.701  2019 presi    gral </code></pre>
+</div>
+</div>
+<p>Este <a href="https://electorarg.github.io/polAr/articles/compute.html">artículo</a> del paquete tiene algo más de detalle.</p>
+<hr>
+</section>
+<section id="visualización" class="level3">
+<h3 class="anchored" data-anchor-id="visualización">visualización</h3>
+<p>Por último <code>polAr</code> incluye un par funciones que ayudan a visualizar rápidamente las elecciones de manera resumida. Una primera alternativa es generar tabulados con los resultados agregados de un comicio:</p>
+<pre><code>arg19 %&gt;% 
+  get_names() %&gt;% 
+  tabulate_results()</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="mpclfivhkf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mpclfivhkf table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mpclfivhkf thead, #mpclfivhkf tbody, #mpclfivhkf tfoot, #mpclfivhkf tr, #mpclfivhkf td, #mpclfivhkf th {
+  border-style: none;
+}
+
+#mpclfivhkf p {
+  margin: 0;
+  padding: 0;
+}
+
+#mpclfivhkf .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mpclfivhkf .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mpclfivhkf .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mpclfivhkf .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mpclfivhkf .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mpclfivhkf .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mpclfivhkf .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mpclfivhkf .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mpclfivhkf .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mpclfivhkf .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mpclfivhkf .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mpclfivhkf .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mpclfivhkf .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mpclfivhkf .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mpclfivhkf .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpclfivhkf .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mpclfivhkf .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mpclfivhkf .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mpclfivhkf .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpclfivhkf .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mpclfivhkf .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpclfivhkf .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mpclfivhkf .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpclfivhkf .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mpclfivhkf .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mpclfivhkf .gt_left {
+  text-align: left;
+}
+
+#mpclfivhkf .gt_center {
+  text-align: center;
+}
+
+#mpclfivhkf .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mpclfivhkf .gt_font_normal {
+  font-weight: normal;
+}
+
+#mpclfivhkf .gt_font_bold {
+  font-weight: bold;
+}
+
+#mpclfivhkf .gt_font_italic {
+  font-style: italic;
+}
+
+#mpclfivhkf .gt_super {
+  font-size: 65%;
+}
+
+#mpclfivhkf .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mpclfivhkf .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mpclfivhkf .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mpclfivhkf .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mpclfivhkf .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mpclfivhkf .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mpclfivhkf .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="2" class="gt_heading gt_title gt_font_normal" style="">Argentina - 2019</td>
+    </tr>
+    <tr class="gt_heading">
+      <td colspan="2" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="">Elección General - Presidente de la Nación</td>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Lista">Lista</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Votos">Votos</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Lista" class="gt_row gt_left">blancos</td>
+<td headers="Votos" class="gt_row gt_right">64.4%</td></tr>
+    <tr><td headers="Lista" class="gt_row gt_left">nulos</td>
+<td headers="Votos" class="gt_row gt_right">35.6%</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="2"><strong>Fuente:</strong> polArverse - <em><a href="https://politicaargentina.github.io/electorAr">https://politicaargentina.github.io/electorAr</a></em></td>
+    </tr>
+  </tfoot>
+  
+</table>
+</div>
+</div>
+</div>
+<p>Otra alternativa es analizarlos de manera gráfica<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>:</p>
+<pre><code>arg19 %&gt;% 
+  get_names() %&gt;% 
+  plot_results(national = T)</code></pre>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="2020-05-22-empaquetar_files/figure-html/plot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Ambas funciones requieren utilizar primero <code>get_names</code> en la versión de CRAN. Esta es una función auxiliar para vincular la base de datos de resultados con los nombres de las listas que compiten.</p>
+<p>La versión en desarrollo elimina ese paso intermedio para los casos por defecto de obtención de datos (con fomato <code>long</code>) pero sigue funcionando para los casos en que los datos de la elección fueron descargados <code>wide</code>.</p>
+<p>Puede notarse que <code>plot_results()</code> fue llamado con un parámatro <code>national = TRUE</code>. De esta manera, para elecciones a presidente, el gráfico resultante muestra el agregado de votos al nivel del distrito que se elige el cargo. Si, en cambio, no especificamos nada, el parámetro <code>FALSE</code> por defecto nos devolverá los resultados a nivel de provncias en grillas <em>cómo si fueran mapas</em>. De igual modo, si descargamos una elección a nivel departamental, <code>plot_results()</code>automáticamente graficará los resultados con <code>geofacetAR</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_election_data</span>(<span class="at">district =</span> <span class="st">"caba"</span>,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                  <span class="at">category =</span> <span class="st">"dip"</span>, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">round =</span> <span class="st">"paso"</span> , </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                  <span class="at">year =</span> <span class="dv">2019</span> , </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                  <span class="at">level =</span> <span class="st">"departamento"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_results</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2020-05-22-empaquetar_files/figure-html/geofaceteAR-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>RESUMIENDO</strong></p>
+<p></p><div id="tweet-42697"></div><script>tweet={"url":"https:\/\/twitter.com\/TuQmano\/status\/1263618240938496000","author_name":"JP Ruiz Nicolini ⭐️⭐️⭐️","author_url":"https:\/\/twitter.com\/TuQmano","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"es\" dir=\"ltr\"\u003EY miren lo fácil que es de usar \u007BpolAr\u007D.  Si esta no es la excusa perfecta para empezar a usar R ya no se qué podrá ser \uD83D\uDE02 \u003Ca href=\"https:\/\/t.co\/2tcRR3lN3l\"\u003Epic.twitter.com\/2tcRR3lN3l\u003C\/a\u003E\u003C\/p\u003E&mdash; JP Ruiz Nicolini ⭐️⭐️⭐️ (@TuQmano) \u003Ca href=\"https:\/\/twitter.com\/TuQmano\/status\/1263618240938496000?ref_src=twsrc%5Etfw\"\u003EMay 21, 2020\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-42697").innerHTML = tweet["html"];</script><p></p>
+<hr>
+</section>
+</section>
+<section id="gofacetear" class="level2">
+<h2 class="anchored" data-anchor-id="gofacetear">gofaceteAr</h2>
+<p><img src="https://github.com/electorArg/geofaceteAR/blob/master/hex/ggplot2.png?raw=true" width="200"></p>
+<p>Lo anterior es posible gracias a otro paquete, disponible para descarga desde un repositorio de <em>github</em>. <code>geofaceteAr</code> es una extensión local del paquete <code>geofacet</code> de Ryan Haffen. El empaquetado fue el resultado de ordenar la aplicación para Argentina de esta técnica de acomodar las grillas de <code>ggplot2</code> como si fueran mapas, originalmente presentadas en <code>LatinR</code> 2018.</p>
+<p>Éste carga el paquete <code>geofacet</code> y agrega funciones de utilidad para la <em>geografía</em> argentina. La priemra de ellas es <code>show_arg_codes()</code>que muestra un diccionario de grillas con el <em>id</em> correspondiente para descarga y equivalencias de los <em>id</em> correspodientes a los diferentes distritos.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 26 × 5
+   id           codprov codprov_censo codprov_iso name_iso                      
+   &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;                         
+ 1 ARGENTINA    " "     " "           AR          Argentina                     
+ 2 CABA         "01"    "02"          AR-C        Ciudad Autónoma de Buenos Air…
+ 3 BUENOS AIRES "02"    "06"          AR-B        Buenos Aires                  
+ 4 CATAMARCA    "03"    "10"          AR-K        Catamarca                     
+ 5 CORDOBA      "04"    "14"          AR-X        Córdoba                       
+ 6 CORRIENTES   "05"    "18"          AR-W        Corrientes                    
+ 7 CHACO        "06"    "22"          AR-H        Chaco                         
+ 8 CHUBUT       "07"    "26"          AR-U        Chubut                        
+ 9 ENTRE RIOS   "08"    "30"          AR-E        Entre Ríos                    
+10 FORMOSA      "09"    "34"          AR-P        Formosa                       
+# ℹ 16 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geofaceteAR)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">show_arg_codes</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Usamos la función <code>get_grid()</code> para llamar una grilla disponible en la tabla anterior. Y <code>grid_preview()</code> si queremos ver el diseño de la grilla.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_grid</span>(<span class="st">"TUCUMAN"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   name_provincia            name row col code
+1         TUCUMAN       BURRUYACU   1   4  013
+2         TUCUMAN         CAPITAL   2   4  001
+3         TUCUMAN     CHICLIGASTA   4   2  005
+4         TUCUMAN       CRUZ ALTA   2   5  012
+5         TUCUMAN        FAMAILLA   3   3  003
+6         TUCUMAN        GRANEROS   5   4  009
+7         TUCUMAN JUAN B. ALBERDI   5   3  007
+8         TUCUMAN        LA COCHA   6   3  008
+9         TUCUMAN          LEALES   3   5  011
+10        TUCUMAN           LULES   3   4  002
+11        TUCUMAN        MONTEROS   3   2  004
+12        TUCUMAN       RIO CHICO   4   3  006
+13        TUCUMAN          SIMOCA   4   4  010
+14        TUCUMAN  TAFI DEL VALLE   2   1  017
+15        TUCUMAN      TAFI VIEJO   2   2  016
+16        TUCUMAN         TRANCAS   1   3  014
+17        TUCUMAN     YERBA BUENA   2   3  015</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="2020-05-22-empaquetar_files/figure-html/preview-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Luego, podemos hacer uso nuevamente de la información en nuestro diccionario de identificadores <em>geográficos</em> para recodificar los distritos. El código por <em>default</em> - el que figura dentro de cada cajita del <em>mapa</em>- es el correspondiente a los escrutinios provisorios (que utilizamos en <code>polAr</code>), pero podemos disponer de otros. Por ejemplo, los del <em>INDEC</em>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_grid</span>(<span class="st">"TUCUMAN"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">recode_grid</span>(<span class="at">type =</span> <span class="st">"indec"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17 × 4
+   name              row   col code 
+   &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;
+ 1 BURRUYACU           1     4 007  
+ 2 CAPITAL             2     4 084  
+ 3 CHICLIGASTA         4     2 021  
+ 4 CRUZ ALTA           2     5 014  
+ 5 FAMAILLA            3     3 028  
+ 6 GRANEROS            5     4 035  
+ 7 JUAN B. ALBERDI     5     3 042  
+ 8 LA COCHA            6     3 049  
+ 9 LEALES              3     5 056  
+10 LULES               3     4 063  
+11 MONTEROS            3     2 070  
+12 RIO CHICO           4     3 077  
+13 SIMOCA              4     4 091  
+14 TAFI DEL VALLE      2     1 098  
+15 TAFI VIEJO          2     2 105  
+16 TRANCAS             1     3 112  
+17 YERBA BUENA         2     3 119  </code></pre>
+</div>
+</div>
+<hr>
+<p>Hasta acá llegamos con la primera entrada respecto de {polAr} ya formalmente en CRAN. Espero en una próxima entrada contar un poco más del repositorio de datos y la incorporación de nuevas funciones en la versión de desarrollo.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Inspirados en <a href="https://github.com/jcrodriguez1989/ggplotme"><code>ggplotme</code></a> de <a href="https://twitter.com/CancuCS">Juan Cruz Rodrígurez</a> con <a href="">Camila Higa</a> - <a href="http://mentacomunicacion.com.ar/bigdata/">mentaComunicación</a>- trabajamos en un <em>bot</em> de <em>Twitter</em> que permite consultar resultados de elecciones. La idea es que un usuario le pregunta a <code>@pol_ar_bot</code> sobre una elección, cumpliendo con los parámetros necesarios (<code>distrito</code> + <code>turno</code> + <code>año</code> + <code>categoria</code>) y el <em>bot</em> responde graficando el resultado. <strong>bot</strong>: https://twitter.com/pol_Ar_bot<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+<script src="https://platform.twitter.com/widgets.js"></script>
+</body></html>
