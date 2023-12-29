@@ -18,11 +18,28 @@ about:
 
 **Juan Pablo Ruiz Nicolini**
 
-También conocido como el _TuQmano._ Soy politólogo$^2$ por la Universidad Torcuato Di Tella. Trabajo con datos y visualizaciones. Me gustan las elecciones. *Cientista de Datos* en progreso (*DS*).
+También conocido como el _TuQmano._ Soy politólogo$^2$ por la Universidad Torcuato Di Tella. Trabajo con datos y visualizaciones. Me gustan las elecciones. *Cientista de Datos* en progreso (*DS*). Coordinador del área de Datos en [Fundar](www.fund.ar). 
+
+---
+
+> Corría el año 2015, un estudiante de maestría de Ciencia Política tenía que procesar datos para entregar su tésis y decidió aprovechar la oportunidad para aprender a usar `R`. Al largo y tortuoso camino del requisito académico se agregó un grado de dificultad extra: incorporar un software de programación desde cero, con una curva de aprendizaje algo empinada.
+
+> Años después [reviso scripts del código de la tesis](https://github.com/TuQmano/evoteSALTA_UTDT) y me sonrío al ver extensas líneas de código para recodificar variables.
+
+
+> Mirando en restropectiva, como a mis scripts, aprender R fue **la mejor decisión que tomé en mi carrera profesional.**
+
+> `R` desde entonces en una herramienta fundamental de mi día a día. Lo es en el ámbito académico y [como docente universitario](https://tuqmano.github.io/geo_utdt/); en mis trabajos como [consultor y analista](https://twitter.com/menta_arg); en mis [tareas como funcionario público](https://ropensci.org/es/blog/2022/11/23/r-universe-stars-1-es/); en mis ratos libres, [como un pasatiempo](https://twitter.com/TuQmano/status/1426882408574595072); y en mi trabajo actual, coordinando el equipo de Datos de [Fundar](https://fund.ar/), un _think tank_ que estudia y elabora políticas públicas para  el desarrollo sostenible e inclusivo de Argentina.  
+
+(Extracto de [_Divide y venceras: de polar al Polarverse_](https://ropensci.org/es/blog/2023/12/05/2023-12-05-divide-y-venceras-de-polar-al-polarverse/))
+
+---
 
 Como politólogo [mis temas de investigación](https://www.researchgate.net/profile/Juan-Ruiz-Nicolini) se concentraron en estudios electorales, partidos y reforma política. En particular, he trabajado en la evaluación del impacto político del cambio en la tecnología con la que se emiten los votos.
 
 Como *DS* vengo trabajando en el desarrollo de paquetes de `R` para [facilitar herramientas y el acceso a datos políticos de Argentina](https://github.com/politicaargentina/).
+
+
 
 
 
