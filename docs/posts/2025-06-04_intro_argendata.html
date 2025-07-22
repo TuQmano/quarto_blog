@@ -321,8 +321,7 @@ En <strong>Argendata</strong>, la <strong>calidad, transparencia y reproducibili
 <li><p><a href="#data-transformers"><strong><code>data-transformers</code></strong></a>: Una biblioteca para <code>Python</code> (<a href="https://github.com/argendatafundar/data-transformers" class="uri">https://github.com/argendatafundar/data-transformers</a>) diseñada para facilitar la escritura, ejecución, reproducibilidad y versionado del código fuente que manipula datos estructurados. Su rol principal es formatear los datos para las visualizaciones del <em>Frontend</em>.</p></li>
 <li><p><a href="#transformers"><strong><code>transformers</code></strong></a>: Este repositorio (<a href="https://github.com/argendatafundar/transformers" class="uri">https://github.com/argendatafundar/transformers</a>) aloja los scripts de <code>Python</code> que actúan como “recetas” para transformar los datos de <code>data</code> al formato requerido por el <em>Frontend</em> para la visualización.<br>
 <br>
-<br>
-<a href="https://github.com/argendatafundar/"><img src="http://149.50.137.164:2147/static/argendata/argendata-flujo-transparente-negro.svg" class="img-fluid"></a></p></li>
+<img src="data/argendata-flow.png" class="img-fluid"></p></li>
 </ul>
 </section>
 <section id="sobre-nuestros-datos" class="level3">
@@ -469,8 +468,7 @@ write_output( data = df_output,
     ├── TRANEN_g16_transformer.py
     ├── TRANEN_g17_transformer.py
     ├── TRANEN_g18_transformer.py
-    └── TRANEN_g19_transformer.py
-</code></pre>
+    └── TRANEN_g19_transformer.py</code></pre>
 <p>Cada dataset publicado en <code>data</code> (resultado del proceso ETL) tiene una correspondencia con uno o más <em>transformers</em> aquí. Un dataset de <code>data</code> (por ejemplo, <code>matriz_prim_mundo_historic_larga.csv</code> en <a href="https://github.com/argendatafundar/data/blob/main/TRANEN/matriz_prim_mundo_historic_larga.csv"><code>data</code></a>) es el “insumo” para un <em>transformer</em> (como <code>TRANEN_g01_transformer.py</code> en <a href="https://github.com/argendatafundar/transformers/blob/main/TRANEN/TRANEN_g01_transformer.py"><code>transformers</code></a>. Esta equivalencia está documentada en un archivo <code>mappings.json</code> dentro de cada subdirectorio de tópico en este repositorio.</p>
 <p>Un ejemplo de cómo opera un <em>transformer</em> es el <code>TRANEN_g01_transformer.py</code>, que toma un <em>DataFrame</em> y aplica una serie de transformaciones usando funciones de <code>data-transformers</code> (como <code>query</code>, <code>rename_cols</code> y <code>sort_values</code>) para preparar los datos para la visualización final. Esto asegura que los datos sean presentados de forma óptima y coherente en la web.<br>
 <br>
@@ -573,8 +571,7 @@ Python</p>
 <span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="co">#  | 76 |   1800 | Biocombustibles |       0 |            0 |</span></span>
 <span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="co">#  </span></span>
 <span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a><span class="co">#  ------------------------------</span></span>
-<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="co">#  </span></span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="co">#  </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Este proceso en dos etapas (primero ETL, luego transformación para <em>Frontend</em>) asegura la <strong>calidad del dato base</strong> y al mismo tiempo la <strong>flexibilidad y eficiencia</strong> en la <strong>presentación visual</strong> de la información.<br>
 <br>
 ——–<br>

@@ -12,8 +12,7 @@ tags: [argendata, data, fundar]
 
 En este, nuestro primer cumpleañitos, quiero compartir un poco más de detalle del **laburo datero** que hay por detrás de este pequeño gran orgullo TuQmano. Y extender un agradecimiento por el enorme esfuerzo a todo **fundar,** pero en particular a "los datasets", el equipo que lideró el trabajo que acá comparto y a nuestra capitana Pau Isaak.\
 
-
-```{r} 
+```{r}
 #| label: fig-collage 
 #| echo: false 
 #| layout-ncol: 3 
@@ -45,7 +44,6 @@ knitr::include_graphics(c(
 
 Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables y disponibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia
 
-
 #### Los Datos: El Corazón de Argendata
 
 **TL;DR\
@@ -70,8 +68,7 @@ Para lograr todo esto, en Argendata utilizamos un conjunto de **herramientas y r
 
 -   [**`transformers`**]: Este repositorio (<https://github.com/argendatafundar/transformers>) aloja los scripts de `Python` que actúan como "recetas" para transformar los datos de `data` al formato requerido por el *Frontend* para la visualización.\
     \
-    \
-    [![](http://149.50.137.164:2147/static/argendata/argendata-flujo-transparente-negro.svg)](https://github.com/argendatafundar/)
+    ![](data/argendata-flow.png)
 
 ### Sobre nuestros datos
 
@@ -249,7 +246,6 @@ El trabajo en este repositorio se organiza por **tópicos**, reflejando la estru
     ├── TRANEN_g17_transformer.py
     ├── TRANEN_g18_transformer.py
     └── TRANEN_g19_transformer.py
-
 ```
 
 Cada dataset publicado en `data` (resultado del proceso ETL) tiene una correspondencia con uno o más *transformers* aquí. Un dataset de `data` (por ejemplo, `matriz_prim_mundo_historic_larga.csv` en [`data`](https://github.com/argendatafundar/data/blob/main/TRANEN/matriz_prim_mundo_historic_larga.csv)) es el "insumo" para un *transformer* (como `TRANEN_g01_transformer.py` en [`transformers`](https://github.com/argendatafundar/transformers/blob/main/TRANEN/TRANEN_g01_transformer.py). Esta equivalencia está documentada en un archivo `mappings.json` dentro de cada subdirectorio de tópico en este repositorio.
@@ -359,7 +355,6 @@ query(condition='tipo_energia != "Total"'),
 #  ------------------------------
 #  
 
-
 ```
 
 Este proceso en dos etapas (primero ETL, luego transformación para *Frontend*) asegura la **calidad del dato base** y al mismo tiempo la **flexibilidad y eficiencia** en la **presentación visual** de la información.\
@@ -368,8 +363,7 @@ Este proceso en dos etapas (primero ETL, luego transformación para *Frontend*) 
 
 {{< video data/argendata-historico.mp4 width="600px" >}}
 
-
 \
-Hasta acá un resumen de lo que fue el primer año, centrado en **el camino de los datos.** En próximas publicaciones, espero con *blogueros* inivtados, avanzaremos con más detalle sobre algunos de los procesos, con especial atención al trabajo dedicado a la visualización. \
+Hasta acá un resumen de lo que fue el primer año, centrado en **el camino de los datos.** En próximas publicaciones, espero con *blogueros* inivtados, avanzaremos con más detalle sobre algunos de los procesos, con especial atención al trabajo dedicado a la visualización.\
 \
 Hasta la próxima y feliz cumple a nosotros =)\
