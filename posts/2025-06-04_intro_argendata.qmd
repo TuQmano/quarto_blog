@@ -366,7 +366,8 @@ Este proceso en dos etapas (primero ETL, luego transformación para *Frontend*) 
 \
 --------\
 
-{{< video http://149.50.137.164:2147/static/argendata/argendata-historico.mp4 >}}
+{{< video data/argendata-historico.mp4 width="600px" >}}
+
 
 \
 Hasta acá un resumen de lo que fue el primer año, centrado en **el camino de los datos.** En próximas publicaciones, espero con *blogueros* inivtados, avanzaremos con más detalle sobre algunos de los procesos, con especial atención al trabajo dedicado a la visualización. \
