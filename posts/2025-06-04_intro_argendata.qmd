@@ -45,9 +45,8 @@ knitr::include_graphics(c(
 
 Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables y disponibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia
 
-------------------------------------------------------------------------
 
-## Los Datos: El Corazón de Argendata
+#### Los Datos: El Corazón de Argendata
 
 **TL;DR\
 **\
