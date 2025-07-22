@@ -18,7 +18,7 @@ about:
 
 **Juan Pablo Ruiz Nicolini**
 
-También conocido como el _TuQmano._ Soy politólogo$^2$ por la Universidad Torcuato Di Tella. Trabajo con datos y visualizaciones. Me gustan las elecciones. *Cientista de Datos* en progreso (*DS*). Coordinador del área de Datos en [Fundar](www.fund.ar). 
+También conocido como el _TuQmano._ Soy politólogo$^2$ por la Universidad Torcuato Di Tella. Trabajo con datos y visualizaciones. Me gustan las elecciones. *Cientista de Datos* en progreso (*DS*). Director del área de Datos en [Fundar](www.fund.ar)  y coordinador de datos en [argendata](argendata.fund.ar)
 
 ---
 

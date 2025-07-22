@@ -5,6 +5,13 @@ project:
 website:
   title: "DiaRio de un TuQmano"
   navbar:
+    left: 
+      - text: 'Opinion'
+        href: https://tuqmano.tumblr.com/
+      - text: 'Researh'
+        href: https://www.researchgate.net/profile/Juan-Ruiz-Nicolini  
+      - text: 'r-Universe'
+        href:  https://github.com/PoliticaArgentina 
     right:
       - about.qmd
       - icon: github
