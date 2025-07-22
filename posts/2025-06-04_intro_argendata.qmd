@@ -42,7 +42,7 @@ knitr::include_graphics(c(
 
 [Argendata](https://argendata.fund.ar/) es una iniciativa de [fundar](https://fund.ar/) que busca organizar, armonizar y publicar datos sobre Argentina con una lógica clara: que sirvan para entender mejor, discutir mejor y decidir mejor. En definitiva, un pequeño aporte que tiene una enorme ambición: transformar la Argentina.
 
-Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables y disponibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia
+Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables, disponibles y reproducibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia y de la buena, confiable!
 
 #### Los Datos: El Corazón de Argendata
 
@@ -80,7 +80,7 @@ El repositorio `qa` (<https://github.com/argendatafundar/qa>) es nuestro caballi
 
 1.  **Organización y Administración**: `qa` establece una **estructura clara y estandarizada** para el sistema de archivos compartido. Esto es crucial para que todos los investigadores y el equipo de datos trabajen con la misma lógica al guardar y buscar la información, minimizando así errores y datos duplicados. Asegura que los datos se almacenen de manera predecible, facilitando su gestión a largo plazo.
 
-2.  **Control de Calidad Interactivo**: Facilita una **colaboración constante y efectiva** entre los investigadores, que son quienes generan los datos, y nuestro equipo especializado. A través de este programa, se realizan **validaciones sistemáticas** que permiten detectar inconsistencias, anomalías o errores en etapas tempranas. Por ejemplo, `qa` puede verificar que un campo numérico no contenga texto, que los rangos de fechas sean lógicos, o que los valores de una variable categórica se ajusten a un listado predefinido. Al automatizar estos controles, `qa` acelera el ciclo de desarrollo, reduce la carga de trabajo manual y garantiza que solo los datos más confiables y limpios avancen hacia las siguientes etapas de armonización y visualización. Es, en esencia, nuestro guardián de la integridad de los datos.
+2.  **Control de Calidad Interactivo**: facilita una **colaboración constante y efectiva** entre los investigadores, que son quienes generan los datos, y nuestro equipo especializado. A través de este programa, se realizan **validaciones sistemáticas** que permiten detectar inconsistencias, anomalías o errores en etapas tempranas. Por ejemplo, `qa` puede verificar que un campo numérico no contenga texto, que los rangos de fechas sean lógicos, o que los valores de una variable categórica se ajusten a un listado predefinido. Al automatizar estos controles, `qa` acelera el ciclo de desarrollo, reduce la carga de trabajo manual y garantiza que solo los datos más confiables y limpios avancen hacia las siguientes etapas de armonización y visualización. Es, en esencia, nuestro guardián de la integridad de los datos.
 
 #### **`geonomencladores`**
 
@@ -200,11 +200,11 @@ El repositorio `data-transformers` (<https://github.com/argendatafundar/data-tra
 
 Esta herramienta se enfoca en el **formato y la preparación de los datos** según las necesidades específicas del código utilizado por el *Frontend* para las visualizaciones. No se trata de la generación inicial de datos (eso ocurre en `etl`), sino de las transformaciones finales que optimizan los datasets para su presentación interactiva. Esto puede incluir tareas como:
 
--   **Filtrado de valores**: Seleccionar subconjuntos de datos relevantes para una visualización particular.
+-   **Filtrado de valores**: seleccionar subconjuntos de datos relevantes para una visualización particular.
 
--   **Selección y renombramiento de variables**: Ajustar los nombres de las columnas o seleccionar solo aquellas que son necesarias para el gráfico final.
+-   **Selección y renombramiento de variables**: ajustar los nombres de las columnas o seleccionar solo aquellas que son necesarias para el gráfico final.
 
--   **Agregaciones o pivotes específicos**: Reestructurar los datos para que se adapten a los requisitos del componente de visualización.
+-   **Agregaciones o pivotes específicos**: reestructurar los datos para que se adapten a los requisitos del componente de visualización.
 
 Al centralizar estas transformaciones en `data-transformers`, se garantiza que el paso final de preparación de datos sea consistente y que cualquier cambio necesario en el formato de visualización se aplique de manera eficiente y reproducible. Esto es vital para mantener la agilidad en el desarrollo de nuevas visualizaciones y la calidad de la información mostrada en el sitio.
 
@@ -361,7 +361,7 @@ Este proceso en dos etapas (primero ETL, luego transformación para *Frontend*) 
 \
 --------\
 
-{{< video data/argendata-historico.mp4 width="600px" >}}
+{{< video data/argendata-historico.mp4 width: 100%; height: auto >}}
 
 \
 Hasta acá un resumen de lo que fue el primer año, centrado en **el camino de los datos.** En próximas publicaciones, espero con *blogueros* inivtados, avanzaremos con más detalle sobre algunos de los procesos, con especial atención al trabajo dedicado a la visualización.\

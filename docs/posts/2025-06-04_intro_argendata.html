@@ -301,7 +301,7 @@ Figure&nbsp;1: Un año de datos en Argendata
 <section id="qué-es-argendata" class="level3">
 <h3 class="anchored" data-anchor-id="qué-es-argendata">¿Qué es Argendata?</h3>
 <p><a href="https://argendata.fund.ar/">Argendata</a> es una iniciativa de <a href="https://fund.ar/">fundar</a> que busca organizar, armonizar y publicar datos sobre Argentina con una lógica clara: que sirvan para entender mejor, discutir mejor y decidir mejor. En definitiva, un pequeño aporte que tiene una enorme ambición: transformar la Argentina.</p>
-<p>Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables y disponibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia</p>
+<p>Pero no se trata solo de subir textos y gráficos. Detrás del sitio hay una estructura técnica que permite mantener los datos vivos, trazables, disponibles y reproducibles. Una arquitectura pensada para que el contenido sea más que información: que sea evidencia y de la buena, confiable!</p>
 <section id="los-datos-el-corazón-de-argendata" class="level4">
 <h4 class="anchored" data-anchor-id="los-datos-el-corazón-de-argendata">Los Datos: El Corazón de Argendata</h4>
 <p><strong>TL;DR<br>
@@ -334,7 +334,7 @@ En <strong>Argendata</strong>, la <strong>calidad, transparencia y reproducibili
 <p>El repositorio <code>qa</code> (<a href="https://github.com/argendatafundar/qa" class="uri">https://github.com/argendatafundar/qa</a>) es nuestro caballito de batalla para trabajar por la <strong>calidad y consistencia de los datos</strong>. Tiene dos funciones principales que resultan clave:</p>
 <ol type="1">
 <li><p><strong>Organización y Administración</strong>: <code>qa</code> establece una <strong>estructura clara y estandarizada</strong> para el sistema de archivos compartido. Esto es crucial para que todos los investigadores y el equipo de datos trabajen con la misma lógica al guardar y buscar la información, minimizando así errores y datos duplicados. Asegura que los datos se almacenen de manera predecible, facilitando su gestión a largo plazo.</p></li>
-<li><p><strong>Control de Calidad Interactivo</strong>: Facilita una <strong>colaboración constante y efectiva</strong> entre los investigadores, que son quienes generan los datos, y nuestro equipo especializado. A través de este programa, se realizan <strong>validaciones sistemáticas</strong> que permiten detectar inconsistencias, anomalías o errores en etapas tempranas. Por ejemplo, <code>qa</code> puede verificar que un campo numérico no contenga texto, que los rangos de fechas sean lógicos, o que los valores de una variable categórica se ajusten a un listado predefinido. Al automatizar estos controles, <code>qa</code> acelera el ciclo de desarrollo, reduce la carga de trabajo manual y garantiza que solo los datos más confiables y limpios avancen hacia las siguientes etapas de armonización y visualización. Es, en esencia, nuestro guardián de la integridad de los datos.</p></li>
+<li><p><strong>Control de Calidad Interactivo</strong>: facilita una <strong>colaboración constante y efectiva</strong> entre los investigadores, que son quienes generan los datos, y nuestro equipo especializado. A través de este programa, se realizan <strong>validaciones sistemáticas</strong> que permiten detectar inconsistencias, anomalías o errores en etapas tempranas. Por ejemplo, <code>qa</code> puede verificar que un campo numérico no contenga texto, que los rangos de fechas sean lógicos, o que los valores de una variable categórica se ajusten a un listado predefinido. Al automatizar estos controles, <code>qa</code> acelera el ciclo de desarrollo, reduce la carga de trabajo manual y garantiza que solo los datos más confiables y limpios avancen hacia las siguientes etapas de armonización y visualización. Es, en esencia, nuestro guardián de la integridad de los datos.</p></li>
 </ol>
 </section>
 <section id="geonomencladores" class="level4">
@@ -430,9 +430,9 @@ write_output( data = df_output,
 <p>El repositorio <code>data-transformers</code> (<a href="https://github.com/argendatafundar/data-transformers" class="uri">https://github.com/argendatafundar/data-transformers</a>) es una <strong>biblioteca de <code>Python</code></strong> diseñada para ser un componente clave en el <strong>análisis y procesamiento manual-asistido de datos estructurados</strong> dentro de Argendata. Su propósito principal es <strong>facilitar la escritura, ejecución, reproducibilidad y el versionado</strong> del código fuente que manipula estos datos.</p>
 <p>Esta herramienta se enfoca en el <strong>formato y la preparación de los datos</strong> según las necesidades específicas del código utilizado por el <em>Frontend</em> para las visualizaciones. No se trata de la generación inicial de datos (eso ocurre en <code>etl</code>), sino de las transformaciones finales que optimizan los datasets para su presentación interactiva. Esto puede incluir tareas como:</p>
 <ul>
-<li><p><strong>Filtrado de valores</strong>: Seleccionar subconjuntos de datos relevantes para una visualización particular.</p></li>
-<li><p><strong>Selección y renombramiento de variables</strong>: Ajustar los nombres de las columnas o seleccionar solo aquellas que son necesarias para el gráfico final.</p></li>
-<li><p><strong>Agregaciones o pivotes específicos</strong>: Reestructurar los datos para que se adapten a los requisitos del componente de visualización.</p></li>
+<li><p><strong>Filtrado de valores</strong>: seleccionar subconjuntos de datos relevantes para una visualización particular.</p></li>
+<li><p><strong>Selección y renombramiento de variables</strong>: ajustar los nombres de las columnas o seleccionar solo aquellas que son necesarias para el gráfico final.</p></li>
+<li><p><strong>Agregaciones o pivotes específicos</strong>: reestructurar los datos para que se adapten a los requisitos del componente de visualización.</p></li>
 </ul>
 <p>Al centralizar estas transformaciones en <code>data-transformers</code>, se garantiza que el paso final de preparación de datos sea consistente y que cualquier cambio necesario en el formato de visualización se aplique de manera eficiente y reproducible. Esto es vital para mantener la agilidad en el desarrollo de nuevas visualizaciones y la calidad de la información mostrada en el sitio.</p>
 </section>
@@ -576,7 +576,7 @@ Python</p>
 <br>
 ——–<br>
 </p>
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" width="600px" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="data/argendata-historico.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="data/argendata-historico.mp4"></video></div>
 <p><br>
 Hasta acá un resumen de lo que fue el primer año, centrado en <strong>el camino de los datos.</strong> En próximas publicaciones, espero con <em>blogueros</em> inivtados, avanzaremos con más detalle sobre algunos de los procesos, con especial atención al trabajo dedicado a la visualización.<br>
 <br>
